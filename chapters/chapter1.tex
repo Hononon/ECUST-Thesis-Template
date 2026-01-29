@@ -1,0 +1,69 @@
+\chapter{模板示例}\label{chapter1}
+
+\section{写作说明}
+本章用于展示图、表、算法与公式的基本用法。正文内容请根据实际论文进行替换，引用示例见文献\upcite{latexcompanion,lamport1994latex}。
+
+\section{图表示例}
+\subsection{插图}
+插图见图\ref{fig:template-figure}。
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.2\textwidth]{figures/chapter1/fig.png}
+  \bicaption{模板示例插图}{Sample figure in template}
+  \label{fig:template-figure}
+\end{figure}
+
+\subsection{表格}
+\begin{table}[H]
+  \centering
+  \bicaption{模板示例表格}{Sample table in template}
+  \label{tab:template-table}
+  \begin{tabular}{ccc}
+    \hline
+    项目 & 数值 & 备注 \\
+    \hline
+    A  & 1  & 示例 \\
+    B  & 2  & 示例 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\section{算法示例}
+\begin{algorithm}[H]
+  \caption{示例算法}
+  \label{alg:template}
+  \begin{algorithmic}[1]
+    \Require 输入向量 $\mathbf{x}$
+    \Ensure 输出结果 $y$
+    \State $y \gets 0$
+    \For{each $x_i$ in $\mathbf{x}$}
+    \State $y \gets y + x_i$
+    \EndFor
+    \State \Return $y$
+  \end{algorithmic}
+\end{algorithm}
+
+\section{公式示例}
+行内公式示例：$E=mc^2$。
+
+块级公式示例：
+\begin{equation}
+  y = \sum_{i=1}^{n} x_i
+  \label{eq:template}
+\end{equation}
+
+\section{定理等环境示例}
+\begin{remark}
+  这是一个示例备注环境。
+\end{remark}
+
+\begin{theorem}
+  这是一个示例定理环境。
+\end{theorem}
+\begin{proof}
+  这是定理的证明过程示例。
+\end{proof}
+
+\begin{assumption}
+  这是一个示例假设环境。
+\end{assumption}
