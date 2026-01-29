@@ -6,7 +6,7 @@
 # 注意事项
 
 * 根据学位修改 `ecust_thesis.cls`中 `\documentclass[twoside,master,openany]{ecust_thesis}` 的 `master` 或 `doctor`
-* Linux 和 MacOS 需要手动安装 `fonts` 文件夹中的字体，Windows 系统可直接使用
+* ~~Linux 和 MacOS 需要手动安装 `fonts` 文件夹中的字体，Windows 系统可直接使用~~使用相对路径，非Windows平台不再需要手动安装字体
 * `学位论文扉页_提交要求_授权声明_作者声明`部分编辑`chapters/学位论文扉页_提交要求_授权声明_作者声明.doc`后导出为PDF替换`chapters/学位论文扉页_提交要求_授权声明_作者声明.pdf`文件
 
 # 编译方法

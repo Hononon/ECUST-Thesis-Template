@@ -36,17 +36,49 @@
 %% 字体配置 - 使用 Windows 字体以获得更好的粗体支持
 %%
 \setCJKmainfont[
-  BoldFont={SimHei},
-  ItalicFont={KaiTi}
-]{SimSun}
-\setCJKsansfont[BoldFont={SimHei}]{SimHei}
-\setCJKmonofont{FangSong}
+  Path = ./fonts/,
+  Extension = .ttc,
+  UprightFont = *,
+  BoldFont = *
+]{simsun}
+\setCJKsansfont[
+  Path = ./fonts/,
+  Extension = .ttf,
+  UprightFont = *,
+  BoldFont = *
+]{simhei}
+\setCJKmonofont[
+  Path = ./fonts/,
+  Extension = .ttf,
+  UprightFont = *,
+  BoldFont = *
+]{simfang}
 
 % 设置具体字体命令
-\setCJKfamilyfont{zhsong}[BoldFont={SimHei}]{SimSun}
-\setCJKfamilyfont{zhhei}[BoldFont={SimHei}]{SimHei}
-\setCJKfamilyfont{zhkai}{KaiTi}
-\setCJKfamilyfont{zhfs}{FangSong}
+\setCJKfamilyfont{zhsong}[
+  Path = ./fonts/,
+  Extension = .ttc,
+  UprightFont = *,
+  BoldFont = *
+]{simsun}
+\setCJKfamilyfont{zhhei}[
+  Path = ./fonts/,
+  Extension = .ttf,
+  UprightFont = *,
+  BoldFont = *
+]{simhei}
+\setCJKfamilyfont{zhkai}[
+  Path = ./fonts/,
+  Extension = .ttf,
+  UprightFont = *,
+  BoldFont = *
+]{simkai}
+\setCJKfamilyfont{zhfs}[
+  Path = ./fonts/,
+  Extension = .ttf,
+  UprightFont = *,
+  BoldFont = *
+]{simfang}
 
 \setCJKfamilyfont{zhheadkaiti}[
   Path = ./fonts/,
