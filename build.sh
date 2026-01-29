@@ -1,5 +1,2 @@
-# 依次编译
-xelatex main.tex
-bibtex main
-xelatex main.tex
-xelatex main.tex
+# latexmk自动编译
+latexmk -synctex=1 -xelatex main.tex
