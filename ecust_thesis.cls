@@ -48,10 +48,19 @@
 \setCJKfamilyfont{zhkai}{KaiTi}
 \setCJKfamilyfont{zhfs}{FangSong}
 
+\setCJKfamilyfont{zhheadkaiti}[
+  Path = ./fonts/,
+  Extension = .ttf,
+  UprightFont = *,
+  BoldFont = *
+]{STCuKai-SC}
+
+
 \newcommand*{\songti}{\CJKfamily{zhsong}}
 \newcommand*{\heiti}{\CJKfamily{zhhei}}
 \newcommand*{\kaishu}{\CJKfamily{zhkai}}
 \newcommand*{\fangsong}{\CJKfamily{zhfs}}
+\newcommand{\headkaiti}{\CJKfamily{zhheadkaiti}}
 
 %%
 %% the setup of ctex package
@@ -63,8 +72,8 @@
 
 \def\ECUST@label@abstract{摘要}
 \def\ECUST@label@englishabstract{Abstract}
-\def\ECUST@label@keywords{关键词~}
-\def\ECUST@label@englishkeywords{Keywords~}
+\def\ECUST@label@keywords{关键词:~}
+\def\ECUST@label@englishkeywords{Keywords:~}
 \def\ECUST@label@conclusion{结论}
 \def\ECUST@label@appendix{附录}
 \def\ECUST@label@publications{攻读博士期间的主要学术成果及参与的科研项目}
@@ -173,8 +182,8 @@ footskip=1.2cm% 页脚 1.8cm %
 \fancypagestyle{ECUST@headings}{%
   \fancyhf{}
   \fancyhead[RO,LE]{\songti\zihao{5} 第\thepage 页}
-  \fancyhead[RE,LO]{\ifECUST@master{\zihao{4}\bfseries\kaishu{华东理工大学}}{\zihao{-4}\songti{硕士学位论文}}
-                \else{\zihao{4}\bfseries\kaishu{华东理工大学}}{\zihao{-4}\songti{博士学位论文}}\fi}
+  \fancyhead[RE,LO]{\ifECUST@master{\zihao{4}\headkaiti{华东理工大学}}{\zihao{-4}\songti{硕士学位论文}}
+                \else{\zihao{4}\headkaiti{华东理工大学}}{\zihao{-4}\songti{博士学位论文}}\fi}
   }
 
 %==================================对于openright 选项，必须保证章页右开，且如果前章末页内容须清空其页眉页脚。===================
