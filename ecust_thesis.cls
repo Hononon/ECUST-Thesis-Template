@@ -15,136 +15,136 @@
 
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesClass{ecust_thesis}
-  [2026/01/29 v1.0 ecust_thesis document class]
+[2026/01/29 v1.0 ecust_thesis document class]
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ctexbook}}
 \newif\ifECUST@master\ECUST@masterfalse
 \newif\ifECUST@doctor\ECUST@doctorfalse
 \newif\ifECUST@istwoside\ECUST@istwosidefalse
-\DeclareOption{twoside}{\ECUST@istwosidetrue}
-\DeclareOption{master}{\ECUST@mastertrue}
-\DeclareOption{doctor}{\ECUST@doctortrue}
+  \DeclareOption{twoside}{\ECUST@istwosidetrue}
+  \DeclareOption{master}{\ECUST@mastertrue}
+  \DeclareOption{doctor}{\ECUST@doctortrue}
 
-\ProcessOptions\relax
-\ifECUST@istwoside
-\LoadClass[zihao=-4,a4paper,twoside,openright,UTF8,space=auto,fontset=none]{ctexbook}
-\else
-\LoadClass[zihao=-4,a4paper,oneside,openany,UTF8,space=auto,fontset=none]{ctexbook}
-\fi
+  \ProcessOptions\relax
+  \ifECUST@istwoside
+    \LoadClass[zihao=-4,a4paper,twoside,openright,UTF8,space=auto,fontset=none]{ctexbook}
+  \else
+    \LoadClass[zihao=-4,a4paper,oneside,openany,UTF8,space=auto,fontset=none]{ctexbook}
+  \fi
 
-%%
-%% 字体配置 - 使用 Windows 字体以获得更好的粗体支持
-%%
-\setCJKmainfont[
-  Path = ./fonts/,
-  Extension = .ttc,
-  UprightFont = *,
-  BoldFont = *
-]{simsun}
-\setCJKsansfont[
-  Path = ./fonts/,
-  Extension = .ttf,
-  UprightFont = *,
-  BoldFont = *
-]{simhei}
-\setCJKmonofont[
-  Path = ./fonts/,
-  Extension = .ttf,
-  UprightFont = *,
-  BoldFont = *
-]{simfang}
+  %%
+  %% 字体配置 - 使用 Windows 字体以获得更好的粗体支持
+  %%
+  \setCJKmainfont[
+    Path = ./fonts/,
+    Extension = .ttc,
+    UprightFont = *,
+    BoldFont = *
+  ]{simsun}
+  \setCJKsansfont[
+    Path = ./fonts/,
+    Extension = .ttf,
+    UprightFont = *,
+    BoldFont = *
+  ]{simhei}
+  \setCJKmonofont[
+    Path = ./fonts/,
+    Extension = .ttf,
+    UprightFont = *,
+    BoldFont = *
+  ]{simfang}
 
-% 设置具体字体命令
-\setCJKfamilyfont{zhsong}[
-  Path = ./fonts/,
-  Extension = .ttc,
-  UprightFont = *,
-  BoldFont = *
-]{simsun}
-\setCJKfamilyfont{zhhei}[
-  Path = ./fonts/,
-  Extension = .ttf,
-  UprightFont = *,
-  BoldFont = *
-]{simhei}
-\setCJKfamilyfont{zhkai}[
-  Path = ./fonts/,
-  Extension = .ttf,
-  UprightFont = *,
-  BoldFont = *
-]{simkai}
-\setCJKfamilyfont{zhfs}[
-  Path = ./fonts/,
-  Extension = .ttf,
-  UprightFont = *,
-  BoldFont = *
-]{simfang}
+  % 设置具体字体命令
+  \setCJKfamilyfont{zhsong}[
+    Path = ./fonts/,
+    Extension = .ttc,
+    UprightFont = *,
+    BoldFont = *
+  ]{simsun}
+  \setCJKfamilyfont{zhhei}[
+    Path = ./fonts/,
+    Extension = .ttf,
+    UprightFont = *,
+    BoldFont = *
+  ]{simhei}
+  \setCJKfamilyfont{zhkai}[
+    Path = ./fonts/,
+    Extension = .ttf,
+    UprightFont = *,
+    BoldFont = *
+  ]{simkai}
+  \setCJKfamilyfont{zhfs}[
+    Path = ./fonts/,
+    Extension = .ttf,
+    UprightFont = *,
+    BoldFont = *
+  ]{simfang}
 
-\setCJKfamilyfont{zhheadkaiti}[
-  Path = ./fonts/,
-  Extension = .ttf,
-  UprightFont = *,
-  BoldFont = *
-]{STCuKai-SC}
-
-
-\newcommand*{\songti}{\CJKfamily{zhsong}}
-\newcommand*{\heiti}{\CJKfamily{zhhei}}
-\newcommand*{\kaishu}{\CJKfamily{zhkai}}
-\newcommand*{\fangsong}{\CJKfamily{zhfs}}
-\newcommand{\headkaiti}{\CJKfamily{zhheadkaiti}}
-
-%%
-%% the setup of ctex package
-%%
-\def\CTEX@contentsname{目录}
-\def\CTEX@listfigurename{插图索引}
-\def\CTEX@listtablename{表格索引}
+  \setCJKfamilyfont{zhheadkaiti}[
+    Path = ./fonts/,
+    Extension = .ttf,
+    UprightFont = *,
+    BoldFont = *
+  ]{STCuKai-SC}
 
 
-\def\ECUST@label@abstract{摘要}
-\def\ECUST@label@englishabstract{Abstract}
-\def\ECUST@label@keywords{关键词:~}
-\def\ECUST@label@englishkeywords{Keywords:~}
-\def\ECUST@label@conclusion{结论}
-\def\ECUST@label@appendix{附录}
-\def\ECUST@label@publications{攻读博士期间的主要学术成果及参与的科研项目}
-\def\ECUST@label@projects{攻读学位期间参与的项目}
-\def\ECUST@label@resume{作者简介}
-\def\ECUST@label@reference{参考文献！！！！}
-\def\ECUST@label@thanks{致谢}
-\def\ECUST@value@templateversion{v1.0}
+  \newcommand*{\songti}{\CJKfamily{zhsong}}
+  \newcommand*{\heiti}{\CJKfamily{zhhei}}
+  \newcommand*{\kaishu}{\CJKfamily{zhkai}}
+  \newcommand*{\fangsong}{\CJKfamily{zhfs}}
+  \newcommand{\headkaiti}{\CJKfamily{zhheadkaiti}}
+
+  %%
+  %% the setup of ctex package
+  %%
+  \def\CTEX@contentsname{目录}
+  \def\CTEX@listfigurename{插图索引}
+  \def\CTEX@listtablename{表格索引}
 
 
-%% 当前模板的版本
-\newcommand{\version}{\ECUST@value@templateversion}
-%%==============引用geometry 宏包设置纸张和页面========================
-%设置版面:上3.5cm，下2.5cm，左2.7cm，右2.7cm，页眉2.5cm，页脚1.8cm，装订线0cm
-\usepackage[%
-paper=a4paper,%
-top=2.8cm,% 上 3.5cm %
-bottom=2cm,% 下 2.5cm %
-left=2.5cm,% 左 2.7cm %
-right=2.5cm,% 右 2.7cm %
-headheight=2.0cm,% 页眉 2.5cm %
-headsep=0.3cm,% headsep
-footskip=1.2cm% 页脚 1.8cm %
-]{geometry} % 页面设置 %
-%% =========================================================
+  \def\ECUST@label@abstract{摘要}
+  \def\ECUST@label@englishabstract{Abstract}
+  \def\ECUST@label@keywords{关键词:~}
+  \def\ECUST@label@englishkeywords{Keywords:~}
+  \def\ECUST@label@conclusion{结论}
+  \def\ECUST@label@appendix{附录}
+  \def\ECUST@label@publications{攻读博士期间的主要学术成果及参与的科研项目}
+  \def\ECUST@label@projects{攻读学位期间参与的项目}
+  \def\ECUST@label@resume{作者简介}
+  \def\ECUST@label@reference{参考文献！！！！}
+  \def\ECUST@label@thanks{致谢}
+  \def\ECUST@value@templateversion{v1.0}
 
-%\parskip 0.5ex plus 0.25ex minus 0.25ex
-%% Command -- Clear Double Page
-\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
-  \thispagestyle{empty}%
-  \hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
-%设置行距
-\RequirePackage{setspace}
-\setstretch{1.4}
-\linespread{1.4}
 
-%% 设置章节格式
-% 第1章（空2格）××××，4号黑体，居中，上下各空1行
-\ctexset{chapter={
+  %% 当前模板的版本
+  \newcommand{\version}{\ECUST@value@templateversion}
+  %%==============引用geometry 宏包设置纸张和页面========================
+  %设置版面:上3.5cm，下2.5cm，左2.7cm，右2.7cm，页眉2.5cm，页脚1.8cm，装订线0cm
+  \usepackage[%
+    paper=a4paper,%
+    top=2.8cm,% 上 3.5cm %
+    bottom=2cm,% 下 2.5cm %
+    left=2.5cm,% 左 2.7cm %
+    right=2.5cm,% 右 2.7cm %
+    headheight=2.0cm,% 页眉 2.5cm %
+    headsep=0.3cm,% headsep
+    footskip=1.2cm% 页脚 1.8cm %
+  ]{geometry} % 页面设置 %
+  %% =========================================================
+
+  %\parskip 0.5ex plus 0.25ex minus 0.25ex
+  %% Command -- Clear Double Page
+  \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+        \thispagestyle{empty}%
+        \hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+  %设置行距
+  \RequirePackage{setspace}
+  \setstretch{1.4}
+  \linespread{1.4}
+
+  %% 设置章节格式
+  % 第1章（空2格）××××，4号黑体，居中，上下各空1行
+  \ctexset{chapter={
       name = {第,章},
       number = {\arabic{chapter}},
       format = { \heiti \centering \zihao{4}},
@@ -152,81 +152,81 @@ footskip=1.2cm% 页脚 1.8cm %
       beforeskip = 12pt,
       afterskip = 25bp,
       fixskip = true,
+     }
   }
-}
 
-%% 1.1（空2格）××××，小4号宋体加粗，顶格排，上下各空0.5行
-\ctexset{section={
-  format={\bfseries \songti\raggedright \zihao{-4}},
-  beforeskip = 12pt,
-  afterskip = 12pt,
-  fixskip = true,
+  %% 1.1（空2格）××××，小4号宋体加粗，顶格排，上下各空0.5行
+  \ctexset{section={
+      format={\bfseries \songti\raggedright \zihao{-4}},
+      beforeskip = 12pt,
+      afterskip = 12pt,
+      fixskip = true,
+     }
   }
-}
 
-%1.1.1（空2格）××××，小4号宋体，顶格排
+  %1.1.1（空2格）××××，小4号宋体，顶格排
 
-\ctexset{subsection={
-   format = { \songti \raggedright \zihao{-4}},
-   beforeskip = 0ex,
-   afterskip = 0ex,
-   fixskip = true,
-   indent={-0.25em} % 不加这个看上去好像没有顶格，所以调整一下
-   }
-}
-
-%1.1.1（空2格）××××，小4号宋体，顶格排
-
-\ctexset{subsubsection={
-      format={\songti \raggedright \zihao{-4}},
-      beforeskip = 0ex,
-      afterskip = 0ex,
-      fixskip=true,
+  \ctexset{subsection={
+        format = { \songti \raggedright \zihao{-4}},
+        beforeskip = 0ex,
+        afterskip = 0ex,
+        fixskip = true,
+        indent={-0.25em} % 不加这个看上去好像没有顶格，所以调整一下
+      }
   }
-}
 
-%% 设定目录格式。
-\RequirePackage{titletoc}
-\titlecontents{chapter}[0pt]{\vspace{0.25\baselineskip} \songti \zihao{4}}
-    {\thecontentslabel\quad}{}
-    {\hspace{.5em}\titlerule*{.}\contentspage}
-\titlecontents{section}[0em]{\songti \zihao{-4}}
-    {\thecontentslabel\quad}{}
-    {\hspace{.5em}\titlerule*{.}\contentspage}
-\titlecontents{subsection}[0em]{\songti \zihao{-4}}
-    {\thecontentslabel\quad}{}
-    {\hspace{.5em}\titlerule*{.}\contentspage}
+  %1.1.1（空2格）××××，小4号宋体，顶格排
 
-%% 选择编译
-\RequirePackage{ifthen}
+  \ctexset{subsubsection={
+        format={\songti \raggedright \zihao{-4}},
+        beforeskip = 0ex,
+        afterskip = 0ex,
+        fixskip=true,
+      }
+  }
 
-%% check pdfTeX mode
-\RequirePackage{ifpdf}
+  %% 设定目录格式。
+  \RequirePackage{titletoc}
+  \titlecontents{chapter}[0pt]{\vspace{0.25\baselineskip} \songti \zihao{4}}
+  {\thecontentslabel\quad}{}
+  {\hspace{.5em}\titlerule*{.}\contentspage}
+  \titlecontents{section}[0em]{\songti \zihao{-4}}
+  {\thecontentslabel\quad}{}
+  {\hspace{.5em}\titlerule*{.}\contentspage}
+  \titlecontents{subsection}[0em]{\songti \zihao{-4}}
+  {\thecontentslabel\quad}{}
+  {\hspace{.5em}\titlerule*{.}\contentspage}
 
-%% fancyhdr 页眉页脚控制
-\RequirePackage{fancyhdr}
+  %% 选择编译
+  \RequirePackage{ifthen}
 
-% 空 页眉页脚
-\fancypagestyle{ECUST@empty}{%
-  \fancyhf{}}
+  %% check pdfTeX mode
+  \RequirePackage{ifpdf}
 
-%======正文页眉页脚=================
-\fancypagestyle{ECUST@headings}{%
+  %% fancyhdr 页眉页脚控制
+  \RequirePackage{fancyhdr}
+
+  % 空 页眉页脚
+  \fancypagestyle{ECUST@empty}{%
+    \fancyhf{}}
+
+  %======正文页眉页脚=================
+  \fancypagestyle{ECUST@headings}{%
   \fancyhf{}
   \fancyhead[RO,LE]{\songti\zihao{5} 第\thepage 页}
   \fancyhead[RE,LO]{\ifECUST@master{\zihao{4}\headkaiti{华东理工大学}}{\zihao{-4}\songti{硕士学位论文}}
-                \else{\zihao{4}\headkaiti{华东理工大学}}{\zihao{-4}\songti{博士学位论文}}\fi}
-  }
+\else{\zihao{4}\headkaiti{华东理工大学}}{\zihao{-4}\songti{博士学位论文}}\fi}
+}
 
 %==================================对于openright 选项，必须保证章页右开，且如果前章末页内容须清空其页眉页脚。===================
 \let\ECUST@cleardoublepage\cleardoublepage
 \newcommand{\ECUST@clearemptydoublepage}{%
-	\clearpage{\pagestyle{ECUST@empty}\ECUST@cleardoublepage}}
+  \clearpage{\pagestyle{ECUST@empty}\ECUST@cleardoublepage}}
 \let\cleardoublepage\ECUST@clearemptydoublepage
 
- %================修该frontmatter 的页码为大写罗马格式，并调整页面风格===============
+%================修该frontmatter 的页码为大写罗马格式，并调整页面风格===============
 \renewcommand{\frontmatter}{
- \if@openright\cleardoublepage\else\clearpage\fi
+  \if@openright\cleardoublepage\else\clearpage\fi
   \@mainmatterfalse
   \pagenumbering{Roman}
   \pagestyle{ECUST@headings}
@@ -306,16 +306,16 @@ footskip=1.2cm% 页脚 1.8cm %
 \captionsetup[sub]{font=footnotesize}
 
 \DeclareCaptionOption{bi-first}[]{%
-    \bfseries\songti\zihao{5}
-    \def\tablename{表}
-    \def\figurename{图}
-    \def\ALG@name{算法}
+  \bfseries\songti\zihao{5}
+  \def\tablename{表}
+  \def\figurename{图}
+  \def\ALG@name{算法}
 }
 \DeclareCaptionOption{bi-second}[]{%
-    \zihao{5}
-    \def\tablename{Table}
-    \def\figurename{Fig.}
-    \def\ALG@name{Algorithm}
+  \zihao{5}
+  \def\tablename{Table}
+  \def\figurename{Fig.}
+  \def\ALG@name{Algorithm}
 }
 
 \captionsetup[bi-first]{bi-first}
@@ -370,24 +370,24 @@ footskip=1.2cm% 页脚 1.8cm %
 %% hyperref package
 
 \ifxetex  % xelatex
-\RequirePackage[xetex]{hyperref}
-\hypersetup{
-  bookmarksnumbered,%
-  % bookmarksopen=true,%设置目录在PDF中是自动展开，还是默认折叠
-  % bookmarksopenlevel=5,
-  colorlinks,%
-  linkcolor=black,%
-  urlcolor=black, %
-  citecolor=black,%
-  plainpages=false,%
-  pdfstartview=FitH
-}
+  \RequirePackage[xetex]{hyperref}
+  \hypersetup{
+    bookmarksnumbered,%
+    % bookmarksopen=true,%设置目录在PDF中是自动展开，还是默认折叠
+    % bookmarksopenlevel=5,
+    colorlinks,%
+    linkcolor=black,%
+    urlcolor=black, %
+    citecolor=black,%
+    plainpages=false,%
+    pdfstartview=FitH
+  }
 \else
-\ifpdf    % pdflatex
-\RequirePackage[pdftex,unicode]{hyperref}
-\else     % dvipdfmx or dvips
-\RequirePackage[dvipdfmx,unicode]{hyperref}
-\fi
+  \ifpdf    % pdflatex
+    \RequirePackage[pdftex,unicode]{hyperref}
+  \else     % dvipdfmx or dvips
+    \RequirePackage[dvipdfmx,unicode]{hyperref}
+  \fi
 \fi
 
 %% enumerate 列表环境间距调节
@@ -449,66 +449,66 @@ footskip=1.2cm% 页脚 1.8cm %
     \vspace*{60mm}
     {\heiti\zihao{-2} \ECUST@value@title}
     \vskip 40mm
-    {\heiti \zihao{-2} \ECUST@value@author}
-     \vskip 4mm
-    {\songti \zihao{4} \ECUST@value@defenddate}
+      {\heiti \zihao{-2} \ECUST@value@author}
+    \vskip 4mm
+      {\songti \zihao{4} \ECUST@value@defenddate}
   \end{center}
   \clearpage
   \if@twoside
     \thispagestyle{empty}
     \cleardoublepage
   \fi
- }
+}
 
 \newcommand\makeInfo[1]%
- {
-  \newpage
-  \cleardoublepage
-  \thispagestyle{empty}
+{
+\newpage
+\cleardoublepage
+\thispagestyle{empty}
 
 %udc ltz
 {
-  {\heiti \zihao{5} \noindent \ECUST@label@classification} \ECUST@value@classification \\
-  {\heiti \zihao{5} \ECUST@label@UDC}  \ECUST@value@UDC
+{\heiti \zihao{5} \noindent \ECUST@label@classification} \ECUST@value@classification \\
+{\heiti \zihao{5} \ECUST@label@UDC}  \ECUST@value@UDC
 }
 
-   \begin{center}
+\begin{center}
 
-    \vskip \stretch{1}
-       {\heiti\zihao{-2} \ECUST@value@title}
-    \vskip \stretch{1}
+  \vskip \stretch{1}
+  {\heiti\zihao{-2} \ECUST@value@title}
+  \vskip \stretch{1}
 
-    {\fangsong\zihao{4}}
-    \def\tabcolsep{1pt}
-    \def\arraystretch{1.5}
+  {\fangsong\zihao{4}}
+  \def\tabcolsep{1pt}
+  \def\arraystretch{1.5}
 
-    {\heiti\zihao{-3}
-     \begin{tabular}{l p{3mm} c}
-      \ECUST@label@author & &\ECUSTunderline[180pt]{\ECUST@value@author}
-    \\
-      \ECUST@label@institute & & \ECUSTunderline[180pt]{\ECUST@value@institute}
-    \\
-      \ECUST@label@advisor & &  \ECUSTunderline[180pt]{\ECUST@value@advisor}
-    \\
-      \ECUST@label@chairman & &   \ECUSTunderline[180pt]{\ECUST@value@chairman}
-    \\
-      \ECUST@label@degree & &    \ECUSTunderline[180pt]{\ECUST@value@degree}
-    \\
-      \ECUST@label@major & &    \ECUSTunderline[180pt]{\ECUST@value@major}
-    \\
-      \ECUST@label@school & &   \ECUSTunderline[180pt]{\ECUST@value@school}
-    \\
-      \ECUST@label@defenddate & &  \ECUSTunderline[180pt]{\ECUST@value@defenddate}
+  {\heiti\zihao{-3}
+    \begin{tabular}{l p{3mm} c}
+      \ECUST@label@author     &  & \ECUSTunderline[180pt]{\ECUST@value@author}
+      \\
+      \ECUST@label@institute  &  & \ECUSTunderline[180pt]{\ECUST@value@institute}
+      \\
+      \ECUST@label@advisor    &  & \ECUSTunderline[180pt]{\ECUST@value@advisor}
+      \\
+      \ECUST@label@chairman   &  & \ECUSTunderline[180pt]{\ECUST@value@chairman}
+      \\
+      \ECUST@label@degree     &  & \ECUSTunderline[180pt]{\ECUST@value@degree}
+      \\
+      \ECUST@label@major      &  & \ECUSTunderline[180pt]{\ECUST@value@major}
+      \\
+      \ECUST@label@school     &  & \ECUSTunderline[180pt]{\ECUST@value@school}
+      \\
+      \ECUST@label@defenddate &  & \ECUSTunderline[180pt]{\ECUST@value@defenddate}
     \end{tabular}}
 
-  \end{center}
+\end{center}
 
-  \vskip \stretch{0.5}
-  \clearpage
-  \if@twoside
-    \thispagestyle{empty}
-    \cleardoublepage
-  \fi
+\vskip \stretch{0.5}
+\clearpage
+\if@twoside
+  \thispagestyle{empty}
+  \cleardoublepage
+\fi
 }
 
 
@@ -529,63 +529,63 @@ footskip=1.2cm% 页脚 1.8cm %
   \cleardoublepage
   \thispagestyle{empty}
 
-   \begin{center}
+  \begin{center}
 
 
-   \vspace*{10em}
+    \vspace*{10em}
 
-   {\zihao{-2}\textbf{\ECUST@value@englishtitle}}
+    {\zihao{-2}\textbf{\ECUST@value@englishtitle}}
 
-   \vskip \stretch{1}
+    \vskip \stretch{1}
 
-   {\zihao{-3}
-     \begin{tabular}{ll}
-      \ECUST@label@englishauthor & \ECUSTunderline[200pt]{\ECUST@value@englishauthor}
-    \\
-      \ECUST@label@englishinstitute &  \ECUSTunderline[200pt]{\ECUST@value@englishinstitute}
-    \\
-      \ECUST@label@englishadvisor &  \ECUSTunderline[200pt]{\ECUST@value@englishadvisor}
-    \\
-      \ECUST@label@englishchairman &   \ECUSTunderline[200pt]{\ECUST@value@englishchairman}
-    \\
-      \ECUST@label@englishdegree &    \ECUSTunderline[200pt]{\ECUST@value@englishdegree}
-    \\
-      \ECUST@label@englishmajor &     \ECUSTunderline[200pt]{\ECUST@value@englishmajor}
-    \\
-      \ECUST@label@englishschool &     \ECUSTunderline[200pt]{\ECUST@value@englishschool}
-    \\
-      \ECUST@label@englishdate &   \ECUSTunderline[200pt]{\ECUST@value@englishdate}
-    \end{tabular}}
+    {\zihao{-3}
+      \begin{tabular}{ll}
+        \ECUST@label@englishauthor    & \ECUSTunderline[200pt]{\ECUST@value@englishauthor}
+        \\
+        \ECUST@label@englishinstitute & \ECUSTunderline[200pt]{\ECUST@value@englishinstitute}
+        \\
+        \ECUST@label@englishadvisor   & \ECUSTunderline[200pt]{\ECUST@value@englishadvisor}
+        \\
+        \ECUST@label@englishchairman  & \ECUSTunderline[200pt]{\ECUST@value@englishchairman}
+        \\
+        \ECUST@label@englishdegree    & \ECUSTunderline[200pt]{\ECUST@value@englishdegree}
+        \\
+        \ECUST@label@englishmajor     & \ECUSTunderline[200pt]{\ECUST@value@englishmajor}
+        \\
+        \ECUST@label@englishschool    & \ECUSTunderline[200pt]{\ECUST@value@englishschool}
+        \\
+        \ECUST@label@englishdate      & \ECUSTunderline[200pt]{\ECUST@value@englishdate}
+      \end{tabular}}
 
   \end{center}
 
   \vskip \stretch{0.5}
   \clearpage
   \if@twoside
-  \thispagestyle{empty}
-   \cleardoublepage
+    \thispagestyle{empty}
+    \cleardoublepage
   \fi
 }
 
 %绘制树立排放的论文题目和学校名称
 
 \newcommand\makeVerticalTitle{
-   \cleardoublepage
-   \thispagestyle{empty}
-   \vskip 5cm
-   \begin{center}
+  \cleardoublepage
+  \thispagestyle{empty}
+  \vskip 5cm
+  \begin{center}
     \setstretch{1.1}
     \begin{minipage}{1em}
-        {\heiti\zihao{3}\ECUST@value@vtitle}
-        \vskip 2cm
+      {\heiti\zihao{3}\ECUST@value@vtitle}
+      \vskip 2cm
         {\heiti\zihao{3}\ECUST@value@school}
     \end{minipage}
-   \end{center}
-    \clearpage
-    \if@twoside
-        \thispagestyle{empty}
-        \cleardoublepage
-    \fi
+  \end{center}
+  \clearpage
+  \if@twoside
+    \thispagestyle{empty}
+    \cleardoublepage
+  \fi
 
 }
 
@@ -594,20 +594,20 @@ footskip=1.2cm% 页脚 1.8cm %
   \cleardoublepage
   \thispagestyle{empty}
   \begin{center}
-  {\bf\zihao{3} \ECUST@label@original}
+    {\bf\zihao{3} \ECUST@label@original}
   \end{center}
   \vskip 10pt
-  {\zihao{4}\ECUST@label@originalcontent}
+    {\zihao{4}\ECUST@label@originalcontent}
   \vskip 10pt
   \hspace{8em}{\zihao{4}\ECUST@label@authorsign} \ECUSTunderline[6em]{} \hspace{2em} {\zihao{4}\ECUST@label@originalDate} \ECUSTunderline[6em]{}
 
   \vskip 30mm
 
   \begin{center}
-  {\bf\zihao{3} \ECUST@label@authorization}
+    {\bf\zihao{3} \ECUST@label@authorization}
   \end{center}
   \vskip 10pt
-  {\zihao{4} \ECUST@label@authorizationcontent}
+    {\zihao{4} \ECUST@label@authorizationcontent}
   \vskip 40pt
 
   \hspace{8em}{\zihao{4}\ECUST@label@authorsign} \ECUSTunderline[6em]{} \hspace{2em} {\zihao{4}\ECUST@label@Supervisorsign} \ECUSTunderline[6em]{}
@@ -630,45 +630,45 @@ footskip=1.2cm% 页脚 1.8cm %
 
 
 \fancypagestyle{plain}{% 设置开章页页眉页脚风格(只有页码作为页脚)
-  \fancyhf{}%
-  \fancyfoot[C]{\songti \zihao{5} \ECUST@label@headschoolname}
-  \fancyfoot[C]{\songti \zihao{5} ~---~{\thepage}~---~} %%首页页脚格式
+\fancyhf{}%
+\fancyfoot[C]{\songti \zihao{5} \ECUST@label@headschoolname}
+\fancyfoot[C]{\songti \zihao{5} ~---~{\thepage}~---~} %%首页页脚格式
 }
 
 
- %_ 中文摘要
- \newenvironment{abstract}
- {
+%_ 中文摘要
+\newenvironment{abstract}
+{
   \cleardoublepage
   \chapter*{\vskip 4mm \zihao{4}\centerline{\ECUST@value@title}\vskip 2.5mm\songti\bfseries\zihao{4}\ECUST@label@abstract \vskip -4mm }
   % \addcontentsline{toc}{chapter}{摘要} % 同时加入书签和目录
   \bookmark[dest=\HyperLocalCurrentHref, level=1]{摘要} % 只加入书签，不加入目录
- }
- {}
+}
+{}
 %下一页从偶数页开始
- \newcommand\beginatevenpage{
- \clearpage
+\newcommand\beginatevenpage{
+  \clearpage
   \if@twoside
     \thispagestyle{empty}
     \cleardoublepage
   \fi
- }
- %_ 中文关键词
- \newcommand\keywords[1]{%
-   \vspace{2ex}\noindent{\songti\bfseries\zihao{-4} \ECUST@label@keywords} #1}
+}
+%_ 中文关键词
+\newcommand\keywords[1]{%
+  \vspace{2ex}\noindent{\songti\bfseries\zihao{-4} \ECUST@label@keywords} #1}
 
- %_ 英文摘要
- \newenvironment{englishabstract}
- {
+%_ 英文摘要
+\newenvironment{englishabstract}
+{
   \clearpage
   \chapter*{\vskip 4mm \zihao{4}\bfseries\centerline{\ECUST@value@englishtitle}\vskip 2.5mm\bfseries\zihao{4}\ECUST@label@englishabstract \vskip -4mm }
   % \addcontentsline{toc}{chapter}{Abstract} % 同时加入书签和目录
   \bookmark[dest=\HyperLocalCurrentHref, level=1]{Abstract} % 只加入书签，不加入目录
- }
- {}
+}
+{}
 
- % _英文摘要
- \newcommand\englishkeywords[1]{%
+% _英文摘要
+\newcommand\englishkeywords[1]{%
   \vspace{2ex}\noindent{\bf \ECUST@label@englishkeywords} #1}
 
 %ltz add
@@ -679,9 +679,9 @@ footskip=1.2cm% 页脚 1.8cm %
 %_ 目录
 \renewcommand\tableofcontents{%
   \if@twocolumn
-  \@restonecoltrue\onecolumn
+    \@restonecoltrue\onecolumn
   \else
-  \@restonecolfalse
+    \@restonecolfalse
   \fi
   \chapter*{\songti\bfseries\zihao{4}\contentsname}%目录里显示“目录”，否则\chapter*
   \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
@@ -696,123 +696,123 @@ footskip=1.2cm% 页脚 1.8cm %
 %_ 参考文献环境 
 % 参考文献内容（小4号宋体）
 \renewenvironment{thebibliography}[1]
-     {\zihao{-4}
-      \chapter*{\bibname}
-      \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
-      \addcontentsline{toc}{chapter}{参考文献}
-      \list{\@biblabel{\@arabic\c@enumiv}}%
-           {\settowidth\labelwidth{\@biblabel{#1}}%
-            \leftmargin\labelwidth
-            \advance\leftmargin\labelsep
-            \setlength{\parsep}{0mm} % 段落间距
-            \setlength{\labelsep}{0.5em} % 标号和列表项之间的距离
-            \setlength{\itemsep}{0.0pc} % 条目间距
-            \setlength{\listparindent}{0in} % 段落缩进量
-            \setlength{\itemindent}{0in} % 标签缩进量
-            \setlength{\rightmargin}{0in} % 右边界
-            \@openbib@code
-            \usecounter{enumiv}%
-            \let\p@enumiv\@empty
-            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-      \sloppy
-      \clubpenalty4000
-      \@clubpenalty \clubpenalty
-      \widowpenalty4000%
-      \sfcode`\.\@m}
-     {\def\@noitemerr
-       {\@latex@warning{Empty `thebibliography' environment}}%
-      \endlist}
+{\zihao{-4}
+  \chapter*{\bibname}
+  \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+  \addcontentsline{toc}{chapter}{参考文献}
+  \list{\@biblabel{\@arabic\c@enumiv}}%
+  {\settowidth\labelwidth{\@biblabel{#1}}%
+    \leftmargin\labelwidth
+    \advance\leftmargin\labelsep
+    \setlength{\parsep}{0mm} % 段落间距
+    \setlength{\labelsep}{0.5em} % 标号和列表项之间的距离
+    \setlength{\itemsep}{0.0pc} % 条目间距
+    \setlength{\listparindent}{0in} % 段落缩进量
+    \setlength{\itemindent}{0in} % 标签缩进量
+    \setlength{\rightmargin}{0in} % 右边界
+    \@openbib@code
+    \usecounter{enumiv}%
+    \let\p@enumiv\@empty
+    \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+  \sloppy
+  \clubpenalty4000
+  \@clubpenalty \clubpenalty
+  \widowpenalty4000%
+  \sfcode`\.\@m}
+{\def\@noitemerr
+  {\@latex@warning{Empty `thebibliography' environment}}%
+  \endlist}
 
 
 \newenvironment{publications}[1]
-     {\chapter{\ECUST@label@publications}%
-      \@mkboth{\MakeUppercase\ECUST@label@publications}
-              {\MakeUppercase\ECUST@label@publications}%
-      \addcontentsline{toc}{chapter}{攻读博士期间的主要学术成果及参与的科研项目}
-      \list{\@biblabel{\@arabic\c@enumiv}}%
-           {\settowidth\labelwidth{\@biblabel{#1}}%
-            \leftmargin\labelwidth
-            \advance\leftmargin\labelsep
-            \setlength{\parsep}{0mm}
-            \setlength{\labelsep}{0.5em}
-            \setlength{\itemsep}{0.0pc}
-            \setlength{\listparindent}{0in}
-            \setlength{\itemindent}{0in}
-            \setlength{\rightmargin}{0in}
-            \@openbib@code
-            \usecounter{enumiv}%
-            \let\p@enumiv\@empty
-            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-      \sloppy
-      \clubpenalty4000
-      \@clubpenalty \clubpenalty
-      \widowpenalty4000%
-      \sfcode`\.\@m}
-     {\def\@noitemerr
-       {\@latex@warning{Empty `publications' environment}}%
-      \endlist}
+{\chapter{\ECUST@label@publications}%
+  \@mkboth{\MakeUppercase\ECUST@label@publications}
+  {\MakeUppercase\ECUST@label@publications}%
+  \addcontentsline{toc}{chapter}{攻读博士期间的主要学术成果及参与的科研项目}
+  \list{\@biblabel{\@arabic\c@enumiv}}%
+  {\settowidth\labelwidth{\@biblabel{#1}}%
+    \leftmargin\labelwidth
+    \advance\leftmargin\labelsep
+    \setlength{\parsep}{0mm}
+    \setlength{\labelsep}{0.5em}
+    \setlength{\itemsep}{0.0pc}
+    \setlength{\listparindent}{0in}
+    \setlength{\itemindent}{0in}
+    \setlength{\rightmargin}{0in}
+    \@openbib@code
+    \usecounter{enumiv}%
+    \let\p@enumiv\@empty
+    \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+  \sloppy
+  \clubpenalty4000
+  \@clubpenalty \clubpenalty
+  \widowpenalty4000%
+  \sfcode`\.\@m}
+{\def\@noitemerr
+  {\@latex@warning{Empty `publications' environment}}%
+  \endlist}
 
 
 \newenvironment{projects}[1]
-     {\chapter{\ECUST@label@projects}%
-      \@mkboth{\MakeUppercase\ECUST@label@projects}
-              {\MakeUppercase\ECUST@label@projects}%
-      \list{\@biblabel{\@arabic\c@enumiv}}%
-           {\settowidth\labelwidth{\@biblabel{#1}}%
-            \leftmargin\labelwidth
-            \advance\leftmargin\labelsep
-            \@openbib@code
-            \usecounter{enumiv}%
-            \let\p@enumiv\@empty
-            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-      \sloppy
-      \clubpenalty4000
-      \@clubpenalty \clubpenalty
-      \widowpenalty4000%
-      \sfcode`\.\@m}
-     {\def\@noitemerr
-       {\@latex@warning{Empty `projects' environment}}%
-      \endlist}
+{\chapter{\ECUST@label@projects}%
+  \@mkboth{\MakeUppercase\ECUST@label@projects}
+  {\MakeUppercase\ECUST@label@projects}%
+  \list{\@biblabel{\@arabic\c@enumiv}}%
+  {\settowidth\labelwidth{\@biblabel{#1}}%
+    \leftmargin\labelwidth
+    \advance\leftmargin\labelsep
+    \@openbib@code
+    \usecounter{enumiv}%
+    \let\p@enumiv\@empty
+    \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+  \sloppy
+  \clubpenalty4000
+  \@clubpenalty \clubpenalty
+  \widowpenalty4000%
+  \sfcode`\.\@m}
+{\def\@noitemerr
+  {\@latex@warning{Empty `projects' environment}}%
+  \endlist}
 
-    \newenvironment{resume}
-  {\chapter{\ECUST@label@resume}}
-  {}
+\newenvironment{resume}
+{\chapter{\ECUST@label@resume}}
+{}
 
 \newenvironment{resumesection}[1]
-  {{\noindent\normalfont\bfseries #1}
-   \list{}{\labelwidth\z@
-           \leftmargin 2\ccwd}
-   \item\relax}
-   {\endlist}
+{{\noindent\normalfont\bfseries #1}
+  \list{}{\labelwidth\z@
+    \leftmargin 2\ccwd}
+  \item\relax}
+{\endlist}
 
 \newenvironment{resumeli}[1]
-  {{\noindent\normalfont\bfseries #1}
-   \list{}{\labelwidth\z@
-           \leftmargin 4\ccwd
-           \itemindent -2\ccwd
-           \listparindent\itemindent}
-   \item\relax}
-   {\endlist}
+{{\noindent\normalfont\bfseries #1}
+  \list{}{\labelwidth\z@
+    \leftmargin 4\ccwd
+    \itemindent -2\ccwd
+    \listparindent\itemindent}
+  \item\relax}
+{\endlist}
 
 \newenvironment{conclusion}
-  {\chapter*{结论}
-    \@mkboth{结论}{结论}%
-    \addcontentsline{toc}{chapter}{结论}}
-  {}
+{\chapter*{结论}
+  \@mkboth{结论}{结论}%
+  \addcontentsline{toc}{chapter}{结论}}
+{}
 
 \renewenvironment{thanks}
-  {\chapter*{\bfseries\songti\ECUST@label@thanks}
+{\chapter*{\bfseries\songti\ECUST@label@thanks}
   \addcontentsline{toc}{chapter}{致谢} % 同时加入书签和目录
   % \bookmark[dest=\HyperLocalCurrentHref, level=1]{致谢} % 只加入书签，不加入目录
-  }
-  {}
+}
+{}
 
-  
+
 
 \newenvironment{symbolnote}
-  {\chapter{\ECUST@label@symbolnote}
+{\chapter{\ECUST@label@symbolnote}
   \fangsong}
-  {}
+{}
 
 
 \setcounter{secnumdepth}{4}  % 章节编号深度 (part 对应 -1)
@@ -820,14 +820,14 @@ footskip=1.2cm% 页脚 1.8cm %
 
 
 \newtheoremstyle{break}% name
-  {}%      Space above, empty = `usual value'
-  {}%      Space below
-  {\itshape}% Body font
-  {}%         Indent amount (empty = no indent, \parindent = para indent)
-  {\bfseries}% Thm head font
-  {.}%        Punctuation after thm head
-  {\newline}% Space after thm head: \newline = linebreak
-  {}%         Thm head spec
+{}%      Space above, empty = `usual value'
+{}%      Space below
+{\itshape}% Body font
+{}%         Indent amount (empty = no indent, \parindent = para indent)
+{\bfseries}% Thm head font
+{.}%        Punctuation after thm head
+{\newline}% Space after thm head: \newline = linebreak
+{}%         Thm head spec
 \endinput
 %%
 %% End of file `ECUSTmaster-xetex.cls'.
