@@ -87,6 +87,16 @@
     BoldFont = *
   ]{STCuKai-SC}
 
+  % ===== 宋体伪粗 =====
+  \setCJKfamilyfont{zhsongbf}[
+    Path = ./fonts/,
+    Extension = .ttc,
+    UprightFont = *,
+    FakeBold = 3
+  ]{simsun}
+
+  \newcommand*{\songtibold}{\CJKfamily{zhsongbf}}
+
 
   \newcommand*{\songti}{\CJKfamily{zhsong}}
   \newcommand*{\heiti}{\CJKfamily{zhhei}}
@@ -157,7 +167,7 @@
 
   %% 1.1（空2格）××××，小4号宋体加粗，顶格排，上下各空0.5行
   \ctexset{section={
-      format={\bfseries \songti\raggedright \zihao{-4}},
+      format={\songtibold\raggedright \zihao{-4}},
       beforeskip = 12pt,
       afterskip = 12pt,
       fixskip = true,
@@ -306,7 +316,7 @@
 \captionsetup[sub]{font=footnotesize}
 
 \DeclareCaptionOption{bi-first}[]{%
-  \bfseries\songti\zihao{5}
+  \songtibold\zihao{5}
   \def\tablename{表}
   \def\figurename{图}
   \def\ALG@name{算法}
@@ -640,7 +650,7 @@
 \newenvironment{abstract}
 {
   \cleardoublepage
-  \chapter*{\vskip 4mm \zihao{4}\centerline{\ECUST@value@title}\vskip 2.5mm\songti\bfseries\zihao{4}\ECUST@label@abstract \vskip -4mm }
+  \chapter*{\vskip 4mm \zihao{4}\centerline{\ECUST@value@title}\vskip 2.5mm\songtibold\zihao{4}\ECUST@label@abstract \vskip -4mm }
   % \addcontentsline{toc}{chapter}{摘要} % 同时加入书签和目录
   \bookmark[dest=\HyperLocalCurrentHref, level=1]{摘要} % 只加入书签，不加入目录
 }
@@ -655,7 +665,7 @@
 }
 %_ 中文关键词
 \newcommand\keywords[1]{%
-  \vspace{2ex}\noindent{\songti\bfseries\zihao{-4} \ECUST@label@keywords} #1}
+  \vspace{2ex}\noindent{\songtibold\zihao{-4} \ECUST@label@keywords} #1}
 
 %_ 英文摘要
 \newenvironment{englishabstract}
@@ -683,7 +693,7 @@
   \else
     \@restonecolfalse
   \fi
-  \chapter*{\songti\bfseries\zihao{4}\contentsname}%目录里显示“目录”，否则\chapter*
+  \chapter*{\songtibold\zihao{4}\contentsname}%目录里显示“目录”，否则\chapter*
   \@mkboth{\MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
   % \addcontentsline{toc}{chapter}{目录} % 同时加入书签和目录
   \bookmark[dest=\HyperLocalCurrentHref, level=1]{目录} % 只加入书签，不加入目录
@@ -801,7 +811,7 @@
 {}
 
 \renewenvironment{thanks}
-{\chapter*{\bfseries\songti\ECUST@label@thanks}
+{\chapter*{\songtibold\ECUST@label@thanks}
   \addcontentsline{toc}{chapter}{致谢} % 同时加入书签和目录
   % \bookmark[dest=\HyperLocalCurrentHref, level=1]{致谢} % 只加入书签，不加入目录
 }
@@ -819,15 +829,15 @@
 \setcounter{tocdepth}{2}     % 目录深度 (part 对应 -1)
 
 
-\newtheoremstyle{break}% name
+\newtheoremstyle{definition}% name
 {}%      Space above, empty = `usual value'
 {}%      Space below
 {\itshape}% Body font
 {}%         Indent amount (empty = no indent, \parindent = para indent)
-{\bfseries}% Thm head font
+{\songtibold}% Thm head font
 {.}%        Punctuation after thm head
-{\newline}% Space after thm head: \newline = linebreak
-{}%         Thm head spec
+{ }% Space after thm head
+{\songtibold\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}%         Thm head spec
 \endinput
 %%
 %% End of file `ECUSTmaster-xetex.cls'.
