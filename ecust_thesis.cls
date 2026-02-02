@@ -96,13 +96,14 @@
   ]{simsun}
 
   \newcommand*{\songtibold}{\CJKfamily{zhsongbf}}
-
-
   \newcommand*{\songti}{\CJKfamily{zhsong}}
   \newcommand*{\heiti}{\CJKfamily{zhhei}}
   \newcommand*{\kaishu}{\CJKfamily{zhkai}}
   \newcommand*{\fangsong}{\CJKfamily{zhfs}}
   \newcommand{\headkaiti}{\CJKfamily{zhheadkaiti}}
+
+  % ===== 宋体伪粗体命令 =====
+  \renewcommand{\bfseries}{\songtibold}
 
   %%
   %% the setup of ctex package
