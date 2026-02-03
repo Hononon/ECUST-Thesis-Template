@@ -329,6 +329,18 @@
   \def\ALG@name{Algorithm}
 }
 
+% 算法环境标题中文化（兼容 algorithm / algorithm2e）
+\AtBeginDocument{%
+  \@ifpackageloaded{algorithm}{%
+    \@ifundefined{floatname}{}{\floatname{algorithm}{算法}}%
+    \@ifundefined{listalgorithmname}{}{\renewcommand{\listalgorithmname}{算法索引}}%
+  }{}%
+  \@ifpackageloaded{algorithm2e}{%
+    \@ifundefined{algorithmcfname}{}{\renewcommand{\algorithmcfname}{算法}}%
+    \@ifundefined{listalgorithmcfname}{}{\renewcommand{\listalgorithmcfname}{算法索引}}%
+  }{}%
+}
+
 \captionsetup[bi-first]{bi-first}
 \captionsetup[bi-second]{bi-second}
 
