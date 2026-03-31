@@ -83,8 +83,19 @@
 \newtheorem{theorem}{定理}[chapter]
 \newtheorem{lemma}{引理}[chapter]
 
-\def\proof{\noindent{\songtibold{证明}}：} %定义证明，注意选择中英文
-\def\endproof{\hfill{\songtibold{证毕}}\endtrivlist}% 在proof环境自动添加结束符。
+% 使用 amsthm 的 proof 机制，支持在行间公式末尾通过 \qedhere 放置“证毕”
+\renewcommand{\proofname}{\songtibold{证明}}
+\renewcommand{\qedsymbol}{\mbox{\songtibold{证毕}}}
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{%
+  \par\pushQED{\qed}\normalfont
+  \topsep6\p@\@plus6\p@\relax
+  \trivlist
+  \item[\hskip\labelsep #1：]\ignorespaces
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+\makeatother
 
 
 %\allowdisplaybreaks % 使大公式跨页显示，以补充前一页底部的空白。
