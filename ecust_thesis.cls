@@ -104,6 +104,7 @@
 
   % ===== 宋体伪粗体命令 =====
   \renewcommand{\bfseries}{\songtibold}
+  \newcommand{\engbf}{\fontseries{\bfdefault}\selectfont}
 
   %%
   %% the setup of ctex package
@@ -557,7 +558,7 @@
 
     \vspace*{10em}
 
-    {\zihao{-2}\textbf{\ECUST@value@englishtitle}}
+    {\zihao{-2}\engbf{\ECUST@value@englishtitle}}
 
     \vskip \stretch{1}
 
@@ -684,15 +685,14 @@
 \newenvironment{englishabstract}
 {
   \clearpage
-  \chapter*{\vskip 4mm \zihao{4}\bfseries\centerline{\ECUST@value@englishtitle}\vskip 2.5mm\bfseries\zihao{4}\ECUST@label@englishabstract \vskip -4mm }
-  % \addcontentsline{toc}{chapter}{Abstract} % 同时加入书签和目录
+  \chapter*{\vskip 4mm \zihao{4}\centerline{\engbf{\ECUST@value@englishtitle}}\vskip 2.5mm\zihao{4}\engbf{\ECUST@label@englishabstract} \vskip -4mm }
   \bookmark[dest=\HyperLocalCurrentHref, level=1]{Abstract} % 只加入书签，不加入目录
 }
 {}
 
 % _英文摘要
 \newcommand\englishkeywords[1]{%
-  \vspace{2ex}\noindent{\bf \ECUST@label@englishkeywords} #1}
+  \vspace{2ex}\noindent{\engbf \ECUST@label@englishkeywords} #1}
 
 %ltz add
 %\RequirePackage{titletoc}
