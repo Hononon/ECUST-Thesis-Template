@@ -39,19 +39,19 @@
     Path = ./fonts/,
     Extension = .ttc,
     UprightFont = *,
-    BoldFont = *
+    AutoFakeBold = 3
   ]{simsun}
   \setCJKsansfont[
     Path = ./fonts/,
     Extension = .ttf,
     UprightFont = *,
-    BoldFont = *
+    AutoFakeBold = 3
   ]{simhei}
   \setCJKmonofont[
     Path = ./fonts/,
     Extension = .ttf,
     UprightFont = *,
-    BoldFont = *
+    AutoFakeBold = 3
   ]{simfang}
 
   % 设置具体字体命令
@@ -59,33 +59,37 @@
     Path = ./fonts/,
     Extension = .ttc,
     UprightFont = *,
-    BoldFont = *
+    AutoFakeBold = 3
   ]{simsun}
   \setCJKfamilyfont{zhhei}[
     Path = ./fonts/,
     Extension = .ttf,
     UprightFont = *,
-    BoldFont = *
+    AutoFakeBold = 3
   ]{simhei}
   \setCJKfamilyfont{zhkai}[
     Path = ./fonts/,
     Extension = .ttf,
     UprightFont = *,
-    BoldFont = *
+    AutoFakeBold = 3
   ]{simkai}
   \setCJKfamilyfont{zhfs}[
     Path = ./fonts/,
     Extension = .ttf,
     UprightFont = *,
-    BoldFont = *
+    AutoFakeBold = 3
   ]{simfang}
 
   \setCJKfamilyfont{zhheadkaiti}[
     Path = ./fonts/,
     Extension = .ttf,
     UprightFont = *,
-    BoldFont = *
+    AutoFakeBold = 3
   ]{STCuKai-SC}
+
+
+  % 让中文在 \textbf 下自动伪粗；英文仍走正常粗体字重
+  \xeCJKsetup{AutoFakeBold = true}
 
   % ===== 宋体伪粗 =====
   \setCJKfamilyfont{zhsongbf}[
@@ -102,9 +106,9 @@
   \newcommand*{\fangsong}{\CJKfamily{zhfs}}
   \newcommand{\headkaiti}{\CJKfamily{zhheadkaiti}}
 
-  % ===== 宋体伪粗体命令 =====
-  \renewcommand{\bfseries}{\songtibold}
+  % ===== 粗体命令：英文走 \bfseries，中文切换到伪粗宋体 =====
   \newcommand{\engbf}{\fontseries{\bfdefault}\selectfont}
+  \renewcommand{\bfseries}{\engbf\songtibold}
 
   %%
   %% the setup of ctex package
@@ -281,11 +285,16 @@
 
 %% 英文字体使用 Times New Roman
 \RequirePackage{fontspec}
-\RequirePackage{xltxtra} % \XeTeX Logo
-%% Times Fonts
-\RequirePackage{times}
-%% Set Old Fonts Encoding
-\usepackage[T1]{fontenc}
+%% Latin 字体（优先 Times New Roman，不存在时回退）
+\IfFontExistsTF{Times New Roman}{
+  \setmainfont{Times New Roman}
+  \setsansfont{Arial}
+  \setmonofont{Courier New}
+}{
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+}
 
 
 %% graphics packages
