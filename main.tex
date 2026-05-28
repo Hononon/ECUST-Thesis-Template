@@ -129,8 +129,16 @@
   \end{tabular}}
 \englishauthor{Author Name}
 
-
-% \includepdf[pages=-]{chapters/学位论文扉页_提交要求_授权声明_作者声明.pdf}
+% 根据博士/硕士选择对应的学位论文扉页_提交要求_授权声明_作者声明
+\makeatletter
+\ifECUST@doctor
+  % 博士论文
+  \includepdf[pages=-]{chapters/博士_学位论文扉页 提交要求 授权声明 作者声明.pdf}
+\else
+  % 硕士论文
+  \includepdf[pages=-]{chapters/学位论文扉页_提交要求_授权声明_作者声明.pdf}
+\fi
+\makeatother
 %% 上面资料下载地址：https://gschool.ecust.edu.cn/12735/list.htm
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
